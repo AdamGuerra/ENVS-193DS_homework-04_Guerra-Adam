@@ -63,4 +63,19 @@ fish_res <- fish_lm$residuals
 
 #### 4. Visually check assumptions
 
+```{r, fig.width = 8, fig.height = 6}
+#diagnostic plots
+par(mfrow = c(2,2))
+plot(fish_lm)
+
+```
+
+-   Residuals vs Fitted: Shows residuals and fitted line to visualize constant variance. Dots appear to be evenly and randomly distributed around the line.
+
+-   QQ: Shows both data sets against one another. Data appears to be normally distributed.
+
+-   Scale Location: Similar to residuals vs fitted, showing homoscedasticity of variance. Data appears to be evenly and randomly distributed around the line.
+
+-   Residuals vs Leverage: Shows which data points are influential in the model. There are a few outliers identified that could be influential.
+
 ###### [Repo Link](https://github.com/AdamGuerra/ENVS-193DS_homework-04_Guerra-Adam)
