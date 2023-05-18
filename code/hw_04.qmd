@@ -1,0 +1,11 @@
+---
+title: "Homework 04"
+author: "Adam Guerra"
+date: 05/17/2023
+format: pdf
+editor: visual
+---
+
+## Problem 1
+
+###### [Repo Link](https://github.com/AdamGuerra/ENVS-193DS_homework-04_Guerra-Adam)
