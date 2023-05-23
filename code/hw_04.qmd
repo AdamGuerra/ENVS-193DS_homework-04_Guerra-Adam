@@ -136,7 +136,7 @@ After checking the assumptions for a linear model (step 4), I performed the line
 
 #### 10. Visualize the model predictions and confidence intervals.
 
-```{r, warning = FALSE}
+```{r, warning = FALSE, fig.hieght = 6, fig.weidth = 8}
 #generate predictions
 predictions <- ggpredict(fish_lm, terms = "length")
 
@@ -156,7 +156,7 @@ plot_predictions <-
          caption = "Figure 3: Shows fish lengths' and weights' plotted against the predictions with an accopanying confidence 
                 interval shaded around the regression line.") +
     theme(plot.caption = element_text(hjust = 0),
-          text = element_text(family = 'Times New Roman')) 
+          text = element_text(family = 'Times')) 
 
 plot_predictions
                       
