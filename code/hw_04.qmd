@@ -8,7 +8,7 @@ editor: visual
 
 ## Problem 1
 
-```{r, include = FALSE}
+```{r, include = FALSE, message = FALSE, warning = FALSE}
 #load pakcages
 library(here)
 library(tidyverse)
@@ -69,7 +69,7 @@ fish_res <- fish_lm$residuals
 
 ```{r, fig.width = 8, fig.height = 6}
 #diagnostic plots
-par(mfrow = c(2,2))
+par(mfrow = c(2,2)) #set 2x2 format
 plot(fish_lm)
 
 ```
@@ -144,20 +144,28 @@ predictions
 
 #create visualization
 plot_predictions <- 
-  ggplot(data = fish_data, aes(x = length, y = weight)) +
+  #set global ggplot parameters
+  ggplot(data = fish_data, aes(x = length, y = weight)) + 
+  #plot normal points
     geom_point() +
+  #plot regression line
     geom_line(data = predictions, aes(x = x, y = predicted), color = 'red', 
               linewidth = 1) +
+  #plot confidence interval and make it transperent
     geom_ribbon(data = predictions, aes(x = x, y = predicted, 
                                         ymin = conf.low, ymax = conf.high), alpha = 0.2) +
+  #set theme
     theme_bw() +
+  #create labels and captions 
     labs(x = 'Fish Length (mm)', y = 'Fish Weight (g)', 
          title = 'Fish Length as a Predictor of Fish Weight', 
          caption = "Figure 3: Shows fish lengths' and weights' plotted against the predictions with an accopanying confidence 
                 interval shaded around the regression line.") +
+  #change font type and caption loaction
     theme(plot.caption = element_text(hjust = 0),
           text = element_text(family = 'Times')) 
 
+#show plot
 plot_predictions
                       
 ```
