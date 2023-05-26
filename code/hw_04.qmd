@@ -78,11 +78,11 @@ Figure 2: Diagnostic plots for linear model.
 
 #### 5. Descriptions of diagnostic plots
 
--   Residuals vs Fitted: Shows residuals and fitted line to visualize constant variance. Dots appear to be evenly and randomly distributed around the line.
+-   Residuals vs Fitted: Shows residuals and fitted line to visualize linearity and constant variance. Points appear to be evenly and randomly distributed around the line, although there are a few outliers.
 
 -   QQ: Shows both data sets against one another. Data appears to be normally distributed.
 
--   Scale Location: Similar to residuals vs fitted, showing homoscedasticity of variance. Data appears to be evenly and randomly distributed around the line.
+-   Scale Location: Similar to residuals vs fitted but is more accurate for showing homoscedasticity of variance. Data appears to be evenly and randomly distributed around the line.
 
 -   Residuals vs Leverage: Shows which data points are influential in the model. There are a few outliers identified that could be influential.
 
